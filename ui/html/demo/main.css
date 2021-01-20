@@ -8,8 +8,8 @@ body{
     margin: 5px;
     float: left;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    /* border: 1px solid black; */
-    min-height: 560px;
+    border: 1px solid black;
+    min-height: 600px;
 }
 .blog:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -17,6 +17,7 @@ body{
 
   .blog_images{
       width: 100%;
+      max-height: 400px;
       margin: auto;
   }
   /* https://www.awwwards.com/20-best-web-fonts-from-google-web-fonts-and-font-face.html */
