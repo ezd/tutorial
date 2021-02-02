@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" 
-    import="java.util.Enumeration"
+    import="java.util.Enumeration,java.io.*,java.util.*"
     %>
 <!DOCTYPE html>
 <html>
@@ -34,6 +34,17 @@ out.print("<br><a href=\"implicitobjects.jsp\">Back</a>");
 }else{
 	response.sendRedirect("error.jsp");
 }
+%>
+
+<!-- application state -->
+<% 
+Integer counter=(Integer)application.getAttribute("counter");
+if(counter==null || counter==0){
+	counter=1;
+}
+out.print("visited number of fimes:"+counter);
+application.setAttribute("counter", counter);
+counter++;
 %>
 
 </ul>

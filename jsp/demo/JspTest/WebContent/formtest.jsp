@@ -24,6 +24,17 @@ Remarks:<br>
 <textarea rows="3" name="remarks">
 </textarea>
 <br>
+<hr>
+<%
+Cookie[] favoriteFoodCookies = request.getCookies();
+
+for(Cookie cookie:favoriteFoodCookies){
+	if(cookie.getName().equalsIgnoreCase("ffood")){
+		System.out.println(cookie.getValue());
+	}
+}
+%>
+
 <input type="submit" value="Submit">
 </form>
 </body>
